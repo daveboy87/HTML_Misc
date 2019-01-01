@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Gamertag Generator</title>
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+</head>
+
+
+<body>
+<script>
+var firstName =["Dark","Stone","Onyx","Blue","Glass","Strong","Arcane","Mirage","Sacred","Silver","Golden","Ancient",
+"Crimson","Molten","Stardust","Ethereal","Sapphire","Angelic","Arctic","Hulking","Diamond","Celestial","Charmed","Seductive",
+"Serene","Simple","Devious","Maleficent","Powerful","Sadistic","Majestic","Unknown","Wandering","Lost","Forgotten",
+"Ordinary","Omniscient","Flying","Floating","Soaring","Simmering","Singing","Alien","Weeping","Thriving","Fading",
+"Scribbling","Glimmering","Focused","Electric","Frozen","OneTime","Phaseblade","Sharpened","PartTime"];
+
+var secondName =["Ninja","Master","Monk","Assassin","Princess","Fighter","Brawler","Deathbot","Wizard","Sorceror",
+"Villain","Hero","Magician","Disciple","Archer","PigFarmer","Angel","Demon","Jedi","Templar","WitchDoctor",
+"Alien","Conqueror","Athlete","Unicorn","Sandwich","Miner","Escapist","Sniper","Druid","Rogue","Elf","Necromancer",
+"Destroyer","Protector","Guardian","Overlord","Goddess","Bard","Nobody","Hobo","Dragon","Fairy","Healer","Savant",
+"Priest","Barbarian","Strider","Thief","Dwarf","Spirit","Enchantress","Swordsmith","Cyborg","Android","Adventurer"];
+
+
+function rollname(){
+var pick1= firstName[Math.floor(Math.random()*firstName.length)];
+var pick2= secondName[Math.floor(Math.random()*secondName.length)];
+document.getElementById('name').innerHTML=(pick1+pick2+"_"+Math.floor(Math.random()*100));
+};
+</script>
+
+<center>
+<h1>Random Gamertag Generator</h1><br/><br/>
+<h1 id="name" style="display:inline-block;color:darkgreen;">-----------</h1>
+<br/><br/><br/>
+<input id="roll" type="button" value="Generate new tag" style="font-size:28px;" onclick="rollname()"/>
+</center>
+
+
+</body>
+</html>

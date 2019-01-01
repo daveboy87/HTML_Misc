@@ -1,0 +1,37 @@
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width,intial-scale=1.0">
+<title>RTP Tracker</title>
+<!--Copyright (c) 2018 David Brogdon-->
+</head>
+
+<body style="height:100%;">
+
+<script>
+function checkProd(){
+var units=document.getElementById('myUnits').value;
+var perHour=document.getElementById('hGoal').value;
+var hours=document.getElementById('hWork').value;
+var effic=(units/(perHour*hours))*100;
+var finalres=effic.toFixed(2);
+document.getElementById("result").innerHTML="Your current efficiency rate is "+finalres+" %";}
+</script>
+
+<center>
+<h2 id="test">Real-time Production Tracker</h2>
+<h3>Enter Number of completed units</h3>
+<input type="number" id="myUnits" />
+<br>
+<h3>Enter per-hour production goal</h3>
+<input type="number" id="hGoal" />
+<br>
+<h3>Enter number of hours on the clock</h3>
+<input type="number" id="hWork" />
+<br>
+<br>
+<input type="button" id="addUnit" onclick="checkProd()" value="Calculate"/><br>
+<H3 id="result"/>
+</center>
+</body>
+</html>
